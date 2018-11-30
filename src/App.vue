@@ -1,28 +1,33 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Contacts :selectedContacts="selectedContacts"
+              v-on:contacts-updated="setSelectedContacts($event)"/>
+    <Chat :selectedContacts="selectedContacts"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Chat from './components/Chat.vue'
+import Contacts from './components/Contacts.vue'
 
 export default {
   name: 'app',
+  data: function () {
+    return {
+      selectedContacts: []
+    }
+  },
   components: {
-    HelloWorld
+    Chat,
+    Contacts
+  },
+  methods: {
+    setSelectedContacts: function(contacts) {
+      this.selectedContacts = contacts;
+    }
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>
