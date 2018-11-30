@@ -38,7 +38,7 @@
 <script>
 const axios = require('axios');
 const _ = require('lodash');
-const SERVICE_URL = 'https://tfy254ekqf.execute-api.eu-west-1.amazonaws.com/test';
+const SERVICE_URL = '/test';
 
 export default {
   name: 'Chat',
