@@ -45,9 +45,7 @@ export default {
   data: function () {
     return {
       message: '',
-      history: [{
-        text: 'Hello World!'
-      }],
+      history: [],
     }
   },
   props: ['selectedContacts'],

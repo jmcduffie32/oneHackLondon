@@ -46,17 +46,7 @@ export default {
           name: 'Michael',
           supportsVideo: true,
           isSelected: false
-        },
-        {
-          name: 'FB Contact',
-          supportsVideo: false,
-          isSelected: false
-        },
-        {
-          name: 'SMS Contact',
-          supportsVideo: false,
-          isSelected: false
-        },
+        }
       ]
     }
   },
