@@ -62,7 +62,7 @@ export default {
       });
     },
     inviteToVideo() {
-      const message = "You've been invited to a video chat. Follow this link to join: http://10.122.102.69:8080/#/oneHackLondon"
+      const message = "You've been invited to a video chat. Follow this link to join: https://jmcduffie-one-hack-london.herokuapp.com/"
       this.selectedContacts.forEach((contact) => {
         axios.post(SERVICE_URL, {
           sendMessage: contact.name.toLowerCase(),
